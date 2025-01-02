@@ -14,7 +14,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 
-// Configurar sesiones (si usarás Passport con sesiones)
+// Config session (if you'll use Passport with sessions)
 app.use(
   session({
     secret: 'session-secret',
@@ -23,14 +23,14 @@ app.use(
   })
 );
 
-// Inicializar Passport
+//Passport initializer y session
 app.use(passport.initialize());
 app.use(passport.session());
 
 const userRepository = new UserRepositoryImpl();
 configureGoogleStrategy(userRepository);
 
-// Rutas
+// Routes
 app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {

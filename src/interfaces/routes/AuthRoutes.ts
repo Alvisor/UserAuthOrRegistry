@@ -1,4 +1,3 @@
-// AuthRoutes.ts
 import { Router } from 'express';
 import passport from 'passport';
 import { AuthController } from '../controllers/AuthController';
