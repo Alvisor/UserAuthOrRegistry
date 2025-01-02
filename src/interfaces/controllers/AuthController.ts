@@ -1,5 +1,4 @@
-// AuthController.ts
-import { Request, Response, NextFunction, RequestHandler } from 'express';
+import { RequestHandler } from 'express';
 import { AuthService } from '../../application/AuthService';
 
 export class AuthController {
